@@ -1,7 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
+import { Fragment } from 'react';
+import './App.scss';
 
-import List from './components/List/List';
+import List from './components/List/List.js';
 
 function App() {
 
@@ -13,6 +13,8 @@ function App() {
       "state": "Georgia",
       "mascot": "Hairy Dawg",
       "school": "University of Georgia",
+      "primary_color": "#BA0C2F",
+      "secondary_color": "#000000", 
     },
     {
       "id": 2,
@@ -21,6 +23,8 @@ function App() {
       "state": "Alabama",
       "mascot": "Big Al",
       "school": "University of Alabama",
+      "primary_color": "#9E1B32",
+      "secondary_color": "#828A8F",
     },
     {
       "id": 3,
@@ -29,27 +33,15 @@ function App() {
       "state": "Florida",
       "mascot": "Albert and Alberta Gator",
       "school": "University of Florida",
+      "primary_color": "#0021A5",
+      "secondary_color": "#FA4616",
     }
   ];
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Fragment>
       <List teams={secTeams}/>
-    </div>
+    </Fragment>
   );
 }
 

@@ -9,13 +9,13 @@ const List = ({teams}) => (
          return <li>
             <TeamCard
                key={team.id}
-               teamName={team.team_name}
-               city={team.city}
-               state={team.state}
+               teamName={`${team.school} ${team.mascot}`}
+               city={team.location.city}
+               state={team.location.state}
                mascot={team.mascot}
                school={team.school}
-               primaryColor={team.primary_color}
-               secondaryColor={team.secondary_color}
+               primaryColor={team.color}
+               secondaryColor={team.alt_color}
             />
          </li>
       })}

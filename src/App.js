@@ -1,9 +1,23 @@
-import { Fragment } from 'react';
+import { Fragment, useState, useEffect } from 'react';
+import axios from 'axios';
 import './App.scss';
 
 import List from './components/List/List.js';
 
 function App() {
+  const [teams, setTeams] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:8080/api/teams')
+      .then(res => res.json())
+      .then(data => {
+        console.log('DATA: ', data);
+        setTeams(data);
+      })
+      .catch(err => {
+        console.error(err);
+      });
+  }, []);
 
   const secTeams = [
     {
@@ -40,7 +54,7 @@ function App() {
 
   return (
     <Fragment>
-      <List teams={secTeams}/>
+      <List teams={teams}/>
     </Fragment>
   );
 }

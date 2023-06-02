@@ -5,13 +5,14 @@ import PropTypes from 'prop-types';
 const defaultBackgroundColor = '#ffffff';
 const defaultTextColor = '#000000';
 
-const TeamCard = ({teamName, city, state, mascot, school, primaryColor, secondaryColor}) => (
+const TeamCard = ({teamName, city, state, mascot, school, primaryColor, secondaryColor, logo}) => (
    <div style={{ backgroundColor: (primaryColor || defaultBackgroundColor), color: (secondaryColor || defaultTextColor) }}>
       <h1>{teamName}</h1>
       <div>{city}</div>
       <div>{state}</div>
       <div>{mascot}</div>
       <div>{school}</div>
+      <img src={logo} alt='team logo'/>
    </div>
 );
 

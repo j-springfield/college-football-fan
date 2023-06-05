@@ -2,8 +2,8 @@ import { React, useState } from 'react';
 import './TeamCard.scss'
 import PropTypes from 'prop-types';
 
-const defaultBackgroundColor = '#ffffff';
-const defaultTextColor = '#000000';
+const defaultBackgroundColor = 'white';
+const defaultTextColor = 'black';
 
 const TeamCard = ({teamName, city, state, mascot, school, primaryColor, secondaryColor, logo}) => (
    <div style={{ backgroundColor: (primaryColor || defaultBackgroundColor), color: (secondaryColor || defaultTextColor) }}>
@@ -12,7 +12,7 @@ const TeamCard = ({teamName, city, state, mascot, school, primaryColor, secondar
       <div>{state}</div>
       <div>{mascot}</div>
       <div>{school}</div>
-      <img src={logo} alt='team logo'/>
+      <img className="logo" src={logo} alt='team logo'/>
    </div>
 );
 

@@ -2,7 +2,7 @@ import React from 'react';
 import './List.scss';
 import ncaaLogo from './../../assets/NCAA_football_icon_logo.svg.png';
 
-import TeamCard from '../TeamCard/TeamCard.js';
+import TeamCard from '../TeamCard/TeamCard.lazy.js';
 
 const List = ({teams}) => (
    <ul>

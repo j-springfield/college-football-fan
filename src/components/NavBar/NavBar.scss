@@ -1,0 +1,31 @@
+nav {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+li {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.router {
+    display: grid;
+    grid-template-columns: 0fr 2fr;
+    grid-template-rows: 80px;
+    background-color: #005eb8;
+    height: 80px;
+}
+
+.ncaa-logo {
+    margin: 10px;
+    height: 60px;
+}
+
+.horizontal-nav {
+    list-style-type: none;
+}
+  
+.horizontal-nav li {
+    display: inline-block;
+    margin-right: 10px;
+}

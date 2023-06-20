@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from '../../pages/Home.js';
 import About from '../../pages/About.js';
 import Contact from '../../pages/Contact.js';
+import Teams from '../../pages/Teams.js';
 import logo from '../../assets/NCAA_logo.svg.png';
 
 const linkStyle = {
@@ -16,7 +17,6 @@ const NavBar = () => (
       <Router>
          <div class='router'>
          <Link style={linkStyle} to="/"><img class='ncaa-logo' src={logo}/></Link>
-            {/* <img class='ncaa-logo' src={logo}/> */}
             <nav>
                <ul class='horizontal-nav'>
                   <li>
@@ -35,6 +35,7 @@ const NavBar = () => (
          <Routes>
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/teams" element={<Teams />} />
             <Route path="/" element={<Home />} />
          </Routes>
       </Router>

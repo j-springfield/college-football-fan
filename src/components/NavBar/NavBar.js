@@ -16,7 +16,7 @@ const NavBar = () => (
    <>
       <Router>
          <div class='router'>
-         <Link style={linkStyle} to="/"><img class='ncaa-logo' src={logo}/></Link>
+         <Link style={linkStyle} to="/"><img class='ncaa-logo' alt='ncaa-logo' src={logo}/></Link>
             <nav>
                <ul class='horizontal-nav'>
                   <li>

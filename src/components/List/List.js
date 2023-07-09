@@ -18,7 +18,7 @@ const List = ({teams}) => (
                school={team.school}
                primaryColor={team.color}
                secondaryColor={team.alt_color}
-               logo={logo}
+               image={logo}
             />
          </li>
       })}

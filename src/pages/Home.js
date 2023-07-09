@@ -5,7 +5,6 @@ const Home = () => {
     const navigate = useNavigate();
 
     const handleClick = () => {
-        console.log('Teams!');
         navigate('/teams');
     };
 

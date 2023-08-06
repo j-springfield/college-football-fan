@@ -1,4 +1,5 @@
 import { React, useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import './TeamCard.scss'
 
 import ncaaLogo from './../../assets/NCAA_football_icon_logo.svg.png';
@@ -33,6 +34,15 @@ const TeamCard = ({teamName, city, state, mascot, school, primaryColor, secondar
    );
 };
 
-TeamCard.propTypes = {}
+TeamCard.propTypes = {
+   teamName: PropTypes.string,
+   city: PropTypes.string,
+   state: PropTypes.string,
+   mascot: PropTypes.string,
+   school: PropTypes.string,
+   primaryColor: PropTypes.string,
+   secondaryColor: PropTypes.string,
+   image: PropTypes.string
+}
 
 export default TeamCard;

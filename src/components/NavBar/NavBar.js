@@ -3,6 +3,7 @@ import './NavBar.scss';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from '../../pages/Home.js';
 import About from '../../pages/About.js';
+import User from '../../pages/User.js';
 import Contact from '../../pages/Contact.js';
 import Teams from '../../pages/Teams.js';
 import logo from '../../assets/NCAA_logo.svg.png';
@@ -26,6 +27,9 @@ const NavBar = () => (
                      <Link style={linkStyle} to="/about">About</Link>
                   </li>
                   <li>
+                     <Link style={linkStyle} to="/user">User</Link>
+                  </li>
+                  <li>
                      <Link style={linkStyle} to="/contact">Contact</Link>
                   </li>
                </ul>
@@ -34,6 +38,7 @@ const NavBar = () => (
 
          <Routes>
             <Route path="/about" element={<About />} />
+            <Route path="/user" element={<User />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/teams" element={<Teams />} />
             <Route path="/" element={<Home />} />

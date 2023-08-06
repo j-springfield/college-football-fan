@@ -1,3 +1,10 @@
+# college-football-fan
+
+# Starting the college-football-fan frontend.
+1. Ensure you have the Node backend for the college-football-fan app running on port 8080. If not, go to https://github.com/j-springfield/college-football-fan-api and follow those steps.
+2. Run the `npm i` command to install all dependencies.
+3. Run the `npm start` command to start serving the React app on port 3000.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

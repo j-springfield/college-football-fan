@@ -1,16 +1,31 @@
-import { React, useState } from 'react';
+import { React, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
-const SearchBar = ({teams, setTeams}) => {
+const SearchBar = ({teams, setFilteredTeams}) => {
    const [text, setText] = useState('');
    const [suggestions, setSuggestions] = useState([]);
+
+   useEffect(() => {
+      if (text.length > 0) {
+         const regex = new RegExp(`^${text}`, `i`);
+         setSuggestions(teams.sort().filter(team => regex.test(team.school)));
+         setFilteredTeams(suggestions);
+      }
+      else {
+         setSuggestions([]);
+         setFilteredTeams([]);
+      }
+   }, [text])
 
    const onTypeEvent = (e) => {
       setText(e.target.value);
       if (text.length > 0) {
          const regex = new RegExp(`^${text}`, `i`);
          setSuggestions(teams.sort().filter(team => regex.test(team.school)));
-         setTeams(suggestions);
+         setFilteredTeams(suggestions);
+      } else {
+         setSuggestions([]);
+         setFilteredTeams([]);
       }
    }
    
@@ -23,7 +38,6 @@ const SearchBar = ({teams, setTeams}) => {
       return (
          <ul>
             {suggestions.map( team => <li key={team.school}>{team.school}</li> )}
-            <div>Jay</div>
          </ul>
       )
    }

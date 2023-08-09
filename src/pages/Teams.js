@@ -5,6 +5,7 @@ import SearchBar from '../components/SearchBar/SearchBar.js';
 
 const Teams = () => {
     const [teams, setTeams] = useState([]);
+    const [filteredTeams, setFilteredTeams] = useState([]);
 
     useEffect(() => {
         fetch('http://localhost:8080/api/teams')
@@ -15,12 +16,12 @@ const Teams = () => {
         .catch(err => {
             console.error(err);
         });
-    }, []);
+    }, [filteredTeams]);
 
     return (
         <>
-            <SearchBar teams={teams} setTeams={setTeams}/>
-            <List teams={teams}/>
+            <SearchBar teams={teams} setFilteredTeams={setFilteredTeams}/>
+            <List teams={filteredTeams.length > 0 ? filteredTeams : teams}/>
         </>
     );
 }
